@@ -3,7 +3,7 @@
 @section('contentdefault')
 <section class="section-news">
   <div class="container">
-    <h3 class="sr-only">News</h3>
+    <h3 class="sr-only">Program Jaminan</h3>
     <div class="row">
       <div class="col-md-6 p-l-0">
          <article class="center-block">
