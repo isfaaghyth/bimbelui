@@ -4671,18 +4671,12 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
    }
 }
 
-/*.navbar-default {
+.navbar-default {
    background-color: #ffffff;
    border-color: transparent
-}*/
-
-.navbar-default {
-     background-color:transparent;
-     border-color:transparent;
-     background-image:none;
-     box-shadow:none;
-     padding: 15px;
 }
+
+
 
 .navbar-default .navbar-brand {
    color: #777777

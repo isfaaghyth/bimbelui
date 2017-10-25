@@ -1,89 +1,79 @@
 <!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>BIMBEL-UI</title>
+    <meta name="description" content="Bimbingan Belajar UI, PT Favorit" />
+    <meta name="keywords" content="Bimbel UI, Bimbel PTN Favorit, Bimbel Terbaik" />
+    <meta name="author" content="FReS-TA" />
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon.png">
+    <meta name="msapplication-TileColor" content="#663fb5">
+    <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#663fb5">
+    <link rel="stylesheet" href="css/landio.css">
+  </head>
+  <body>
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+     <!-- Navigation
+     ================================================== -->
 
-    <title>FReS-TA - BIMBEL UI</title>
-    <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
+     <nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top">
+       <div class="container">
+         <a class="navbar-brand" href="{{ url('/') }}" style="vertical-align: middle;">
+           <span class="icon-logo"></span>
+           <span class="sr-only">FReS-TA</span>
+         </a>
+         <a class="navbar-toggler hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
+         &#9776;
+       </a>
+         <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
+           <ul class="nav navbar-nav pull-xs-right">
+             <li class="nav-item nav-item-toggable">
+               <a class="nav-link" href="{{ url('/') }}/about">Tentang Kami<span class="sr-only">(current)</span></a>
+             </li>
+             <li class="nav-item nav-item-toggable">
+               <a class="nav-link" href="{{ url('/') }}">Program Jaminan</a>
+             </li>
+             <li class="nav-item nav-item-toggable">
+               <a class="nav-link" href="{{ url('/') }}" target="_blank">Feluni UI</a>
+             </li>
+             <li class="nav-item nav-item-toggable">
+               <a class="nav-link" href="{{ url('/') }}" target="_blank">Hubungi Kami</a>
+             </li>
+             <li class="navbar-divider hidden-sm-down"></li>
+           </ul>
+         </div>
+       </div>
+     </nav>
 
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+     @yield('content')
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
+     <!-- Footer
+     ================================================== -->
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+     <footer class="section-footer bg-inverse" role="contentinfo">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-6 col-lg-5">
+             <div class="media">
+               <div class="media-left">
+               </div>
+               <small class="media-body media-bottom">
+                 &copy; FReS-TA 2017. <br>
+                 Designed by Muh Isfhani, developed by Muh Isfhani, <br>exclusively for BIMBEL-UI.
+               </small>
+             </div>
+           </div>
+         </div>
+       </div>
+     </footer>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                       BIMBEL-UI
-                        <!-- {{ config('app.name', 'Laravel') }} -->
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ url('/')}}/#about" id="about-menu">Tentang Kami</a></li>
-                            <li><a href="{{ url('/') }}/#testimoni" id="testimoni-menu">Testimoni</a></li>
-                            <li><a href="{{ url('/') }}/#guarantee" id="guarantee-menu">Program Jaminan</a></li>
-                            <li><a href="{{ url('/') }}#feluni" id="feluni-menu">Feluni UI</a></li>
-                            <!-- <li><a href="{{ route('login') }}">Login</a></li> -->
-                            <!-- <li><a href="{{ route('register') }}">Register</a></li> -->
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        @yield('content')
-    </div>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/landio.min.js"></script>
+  </body>
 </html>
