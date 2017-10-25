@@ -37,13 +37,13 @@
                <a class="nav-link" href="{{ url('/') }}/tentang">Tentang Kami<span class="sr-only">(current)</span></a>
              </li>
              <li class="nav-item nav-item-toggable">
-               <a class="nav-link" href="{{ url('/') }}">Program Jaminan</a>
+               <a class="nav-link" href="{{ url('/') }}/jaminan">Program Jaminan</a>
              </li>
              <li class="nav-item nav-item-toggable">
-               <a class="nav-link" href="{{ url('/') }}" target="_blank">Feluni UI</a>
+               <a class="nav-link" href="{{ url('/') }}">Feluni UI</a>
              </li>
              <li class="nav-item nav-item-toggable">
-               <a class="nav-link" href="{{ url('/') }}" target="_blank">Hubungi Kami</a>
+               <a class="nav-link" href="{{ url('/') }}">Hubungi Kami</a>
              </li>
              <li class="navbar-divider hidden-sm-down"></li>
            </ul>

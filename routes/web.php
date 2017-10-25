@@ -19,6 +19,8 @@ Route::get('/tentang', 'AboutController@index');
 
 Route::get('/daftar', 'RegistrationController@index');
 
+Route::get('/jaminan', 'GuaranteeController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
