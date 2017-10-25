@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/about', 'AboutController@index');
+Route::get('/tentang', 'AboutController@index');
+
+Route::get('/daftar', 'RegistrationController@index');
 
 Auth::routes();
 

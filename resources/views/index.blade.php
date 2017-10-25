@@ -10,7 +10,7 @@
      <br>
     <h3>Jaminan Masuk <b>UI</b> dan PTN Favorit Lainnya</h3>
     <h2 class="m-b-3">100% <em>Uang kembali</em>, di <a href="#" class="jumbolink">bimbelui.com</a>.</h2>
-    <a class="btn btn-secondary-outline m-b-1" href="#" role="button">DAFTAR SEKARANG</a>
+    <a class="btn btn-secondary-outline m-b-1" href="{{ url('/') }}/daftar" role="button">DAFTAR SEKARANG</a>
     <ul class="nav nav-inline social-share">
       <li class="nav-item"><a class="nav-link" href="#"><span class="icon-twitter"></span> 1024</a></li>
       <li class="nav-item"><a class="nav-link" href="#"><span class="icon-facebook"></span> 562</a></li>

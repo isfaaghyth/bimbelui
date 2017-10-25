@@ -34,7 +34,7 @@
          <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
            <ul class="nav navbar-nav pull-xs-right">
              <li class="nav-item nav-item-toggable">
-               <a class="nav-link" href="{{ url('/') }}/about">Tentang Kami<span class="sr-only">(current)</span></a>
+               <a class="nav-link" href="{{ url('/') }}/tentang">Tentang Kami<span class="sr-only">(current)</span></a>
              </li>
              <li class="nav-item nav-item-toggable">
                <a class="nav-link" href="{{ url('/') }}">Program Jaminan</a>
