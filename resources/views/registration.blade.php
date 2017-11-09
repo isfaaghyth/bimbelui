@@ -16,8 +16,8 @@
            <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="Email address" autocomplete="off">
           </div>
           <div class="form-group has-icon-left form-control-password">
-           <label class="sr-only" for="inputPassword">Enter a password</label>
-           <input type="password" class="form-control form-control-lg" id="inputPassword" placeholder="Enter a password" autocomplete="off">
+           <label class="sr-only" for="inputFaculity">College majors</label>
+           <input type="text" class="form-control form-control-lg" id="inputFaculity" placeholder="College majors" autocomplete="off">
           </div>
           <div class="form-group">
             <button type="submit" class="btn btn-primary btn-block">DAFTAR</button>

@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/tentang', 'AboutController@index');
-
 Route::get('/daftar', 'RegistrationController@index');
-
 Route::get('/jaminan', 'GuaranteeController@index');
+Route::get('/kontak', 'ContactController@index');
+Route::get('/feluni-ui', 'FeluniController@index');
 
 Auth::routes();
 
